@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo {
+            border: 1px solid black;
+            display: inline-grid;
+            grid-template-rows: 240px repeat(4, 120px);
+            grid-template-columns: 250px 250px;
+            grid-template-areas:
+                "big mid1"
+                "big mid2"
+                "sm1 mid2"
+                "sm2 mid3"
+                "sm3 mid3"
+        }
+
+        .demo>.image:first-child {
+            grid-area: big;
+            border: 1px solid yellow;
+        }
+
+        .demo>.image:nth-child(2) {
+            grid-area: sm1;
+            border: 1px solid yellow;
+        }
+
+        .demo> :nth-child(3) {
+            grid-area: sm2;
+            border: 1px solid yellow;
+        }
+
+        .demo>.image:nth-child(4) {
+            grid-area: sm3;
+            border: 1px solid yellow;
+        }
+
+        .demo>.image:nth-child(5) {
+            grid-area: mid1;
+            border: 1px solid yellow;
+        }
+
+        .demo>.image:nth-child(6) {
+            grid-area: mid2;
+            border: 1px solid yellow;
+        }
+
+        .demo>.image:last-child {
+            grid-area: mid3;
+            border: 1px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo">
+        <div class="image bigImage"></div>
+        <div class="image smallImage"></div>
+        <div class="image smallImage"></div>
+        <div class="image smallImage"></div>
+        <div class="image middleImage"></div>
+        <div class="image middleImage"></div>
+        <div class="image middleImage"></div>
+    </div>
+</body>
+
+</html>
